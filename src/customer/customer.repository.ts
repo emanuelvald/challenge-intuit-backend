@@ -89,8 +89,8 @@ export class CustomerRepository {
   async customerExists(property: string, value: string): Promise<boolean> {
     return this.customerRepository
       .find({ where: { [property]: value.toString() } })
-      .then((result) => {
-        return !result;
+      .then((result: Customer[]) => {
+        return !result.length;
       })
       .catch((error) => {
         throw new BadRequestException({

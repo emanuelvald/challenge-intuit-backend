@@ -13,6 +13,6 @@ export default new DataSource({
   username: configService.get('TYPEORM_USERNAME'),
   password: configService.get('TYPEORM_PASSWORD'),
   database: configService.get('TYPEORM_DATABASE'),
-  entities: [configService.get('TYPEORM_ENTITIES')],
-  migrations: [configService.get('TYPEORM_MIGRATIONS')],
+  entities: ['src/**/*.entity.ts'],
+  migrations: ['src/infrastructure/orm/typeorm/migrations/*.ts'],
 });

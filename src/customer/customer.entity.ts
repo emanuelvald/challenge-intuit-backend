@@ -13,6 +13,7 @@ import {
   IsString,
 } from 'class-validator';
 import { IsSingleTaxIdentification } from '../common/decorators/is-single-tax-identification.decorator';
+import { ApiProperty } from '@nestjs/swagger';
 
 @Entity('customers')
 export class Customer {
@@ -59,6 +60,13 @@ export class Customer {
   @Column({ name: 'cus_email', type: 'character varying' })
   @IsEmail()
   @IsNotEmpty()
+  @ApiProperty({
+    type: String,
+    name: 'email',
+    description: 'Customer email',
+    required: true,
+    example: 'example@email.com',
+  })
   email: string;
 
   @CreateDateColumn({

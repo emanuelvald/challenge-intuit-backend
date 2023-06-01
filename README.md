@@ -1,6 +1,6 @@
 # Challange Intuit Backend
 
-A simple API to manage customers.
+A simple API to manage customers created with NestJS.
 
 ## API
 
@@ -134,4 +134,12 @@ Start the server
 
 ```bash
   npm run start
+```
+
+## Documentation
+
+You can navigate to API documentation provided by Swagger simply by acceding to the following path in your browse.
+
+```http
+  localhost:3000/api
 ```

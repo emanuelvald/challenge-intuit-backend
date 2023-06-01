@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { CustomerModule } from './customer/customer.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import postgresqlConfig from './infrastructure/database/postgresql/postgresql.config';
@@ -31,7 +29,7 @@ import { DataSourceOptions } from 'typeorm';
     }),
     CustomerModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
